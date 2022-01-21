@@ -20,15 +20,15 @@ export default function ListaVendedor() {
   return (
     <View>
       <FlatList 
-      
         data = {vendedores}
         renderItem={ ({item}) =>
             
-
-            <View style={styles.row}>
+           
+              <View style={styles.container}>
                 <Text style={styles.idVendedor}>{item.idVendedor}</Text>
                 <Text style={styles.NomeVendedor}>{item.nome}</Text>
-            </View>
+              </View>
+            
         }
       />
     </View>
@@ -38,18 +38,11 @@ export default function ListaVendedor() {
 
 
 const styles  = StyleSheet.create({
-
   container: {
-      flex: 1,
-      alignContent: "center",
-      alignSelf: "center",
-      justifyContent: 'center',
-      paddingTop: 10,
-      backgroundColor: '#1ff0f1',
-      padding: 8,
-    },
-    row: {
-      flexDirection: 'row',
+    flex: 1,
+    flexDirection: 'row',
+    alignContent: 'flex-start',
+    justifyContent: 'flex-start',
   },
   idVendedor: {
     fontSize: 20,
@@ -66,8 +59,10 @@ const styles  = StyleSheet.create({
     marginTop: 10,
     marginStart: 10,
     borderRadius: 10,
-    padding:10
+    padding:10,
+    marginHorizontal: '11%',
   },
+  
 });
 
 export const repositories = [
@@ -78,7 +73,7 @@ export const repositories = [
   },
   {
       idVendedor: 2,
-      nome: "cleverson",
+      nome: "cleversona aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
       desc: 'gerente não geral',
   },
   {
@@ -87,7 +82,52 @@ export const repositories = [
       desc: 'funcionario',
   },
   {
-      idVendedor: 3,
+      idVendedor: 4,
+      nome: "criver",
+      desc: 'funcionario',
+  },
+  {
+      idVendedor: 5,
+      nome: "criver",
+      desc: 'funcionario',
+  },
+  {
+      idVendedor: 6,
+      nome: "criver",
+      desc: 'funcionario',
+  },
+  {
+      idVendedor: 10,
+      nome: "criver",
+      desc: 'funcionario',
+  },
+  {
+      idVendedor: 11,
+      nome: "criver",
+      desc: 'funcionario',
+  },
+  {
+      idVendedor: 12,
+      nome: "criver",
+      desc: 'funcionario',
+  },
+  {
+      idVendedor: 111,
+      nome: "criver",
+      desc: 'funcionario',
+  },
+  {
+      idVendedor: 222,
+      nome: "criver",
+      desc: 'funcionario',
+  },
+  {
+      idVendedor: 333,
+      nome: "criver",
+      desc: 'funcionario',
+  },
+  {
+      idVendedor: 245,
       nome: "criver",
       desc: 'funcionario',
   }
