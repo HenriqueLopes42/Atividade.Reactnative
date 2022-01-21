@@ -5,12 +5,17 @@ import api from '../../services/api';
 export default function ListaVendedor() {
     const [vendedores, setVendedores] = useState([]);
 
+//    useEffect( () => {
+//        api.get('vendedor').then( (res) => {
+//            setVendedores(res.data);
+//            console.log(vendedores);
+//        });
+//    },[]);
+
     useEffect( () => {
-        api.get('vendedor').then( (res) => {
-            setVendedores(res.data);
-            console.log(vendedores);
-        });
+      setVendedores(repositories);
     },[]);
+
 
   return (
     <View>
@@ -18,6 +23,8 @@ export default function ListaVendedor() {
       
         data = {vendedores}
         renderItem={ ({item}) =>
+            
+
             <View style={styles.row}>
                 <Text style={styles.idVendedor}>{item.idVendedor}</Text>
                 <Text style={styles.NomeVendedor}>{item.nome}</Text>
@@ -62,3 +69,26 @@ const styles  = StyleSheet.create({
     padding:10
   },
 });
+
+export const repositories = [
+  {
+      idVendedor: 1,
+      nome: "Joao",
+      desc: 'gerente geral'
+  },
+  {
+      idVendedor: 2,
+      nome: "cleverson",
+      desc: 'gerente não geral',
+  },
+  {
+      idVendedor: 3,
+      nome: "antonio",
+      desc: 'funcionario',
+  },
+  {
+      idVendedor: 3,
+      nome: "criver",
+      desc: 'funcionario',
+  }
+];
